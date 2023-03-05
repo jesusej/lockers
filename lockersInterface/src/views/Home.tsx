@@ -1,13 +1,22 @@
-import {Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-
-// ['#4f7ef5', '#200d7d']
 
 const Home = () => {
   return (
     <LinearGradient colors={['#28e6dd', '#433cc7']} style={styles.container}>
-      <Text>Home</Text>
+      <View style={styles.subcontainer}>
+        <Text style={styles.title}>Smartlock</Text>
+        <Text style={styles.subtitle}>What would you like to do today?</Text>
+        <View style={styles.buttonRow}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Get a new locker</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Open an existing locker</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </LinearGradient>
   );
 };
@@ -17,6 +26,36 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  subcontainer: {
+    flex: 1,
+    paddingVertical: '25%',
+  },
+  title: {
+    fontSize: 64,
+    textAlign: 'center',
+    color: '#fff',
+  },
+  subtitle: {
+    fontSize: 40,
+    textAlign: 'center',
+    color: '#fff',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    flex: 1,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  button: {
+    backgroundColor: '#e9bd15',
+    borderRadius: 20,
+    alignItems: 'center',
+    paddingVertical: 10,
+    minWidth: '21%',
+  },
+  buttonText: {
+    fontSize: 18,
   },
 });
 
