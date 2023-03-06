@@ -1,12 +1,18 @@
-import {Text, StyleSheet, TouchableOpacity, View, Button} from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 import React from 'react';
+import {Picker} from '@react-native-picker/picker';
 import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {Picker} from '@react-native-picker/picker';
-import {TextInput} from 'react-native-gesture-handler';
 
-const LockerOpener = () => {
+const GetNewLocker = () => {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
 
@@ -20,9 +26,9 @@ const LockerOpener = () => {
         />
       </View>
       <View style={styles.subcontainer}>
-        <Text style={styles.title}>Open an existing locker</Text>
+        <Text style={styles.title}>Get a new locker</Text>
         <View style={styles.row}>
-          <Text style={styles.subtitle}>Select a lock</Text>
+          <Text style={styles.subtitle}>Select a lock available</Text>
           <View style={styles.input}>
             <Picker>
               <Picker.Item label="01" value={1} />
@@ -103,4 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LockerOpener;
+export default GetNewLocker;

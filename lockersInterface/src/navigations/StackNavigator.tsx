@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {Home, LockerOpener} from '../views';
+import {End, GetNewLocker, Home, LockerOpener} from '../views';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +14,8 @@ const StackNavigator = () => {
       }}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="LockerOpener" component={LockerOpener} />
+      <Stack.Screen name="GetNewLocker" component={GetNewLocker} />
+      <Stack.Screen name="End" component={End} />
     </Stack.Navigator>
   );
 };
