@@ -1,7 +1,6 @@
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {Home} from '../views';
-import LockerSelector from '../views/LockerSelector';
+import {Home, LockerOpener} from '../views';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +13,7 @@ const StackNavigator = () => {
         ...TransitionPresets.SlideFromRightIOS,
       }}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="LockerSelector" component={LockerSelector} />
+      <Stack.Screen name="LockerOpener" component={LockerOpener} />
     </Stack.Navigator>
   );
 };
