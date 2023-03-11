@@ -1,4 +1,6 @@
-# Lockers interface app implementation
+# Lockers interface app
+
+Lockers interface app implementation
 
 ## Requirements
 
@@ -7,7 +9,7 @@
 ## How to run in dev mode
 
 1. [Setup your environment](https://reactnative.dev/docs/environment-setup).
-2. Start a terminal and go to the project folder (f.e. *lockers*)
+2. Start a terminal and go to the interface folder (lockersInterface)
 3. If first time, install the package dependencies with `yarn install` or `npm install`.
    - **MAC ONLY**, if you want to load iOS dependencies run `npx pod-install ios`.
 4. Start Metro server with `yarn start` or `npm start`.
