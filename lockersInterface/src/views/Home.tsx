@@ -14,11 +14,11 @@ const Home = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('GetNewLocker')}>
-            <Text style={styles.buttonText}>Get a new locker</Text>
+            <Text style={styles.buttonText}>Get new locker by password</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate('LockerOpener')}>
+            onPress={() => navigation.navigate('LockerOpenerOptions')}>
             <Text style={styles.buttonText}>Open an existing locker</Text>
           </TouchableOpacity>
         </View>
@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
   subcontainer: {
     flex: 1,
     paddingVertical: '20%',
+    margin: 0,
+    paddingHorizontal: 0,
   },
   title: {
     fontSize: 64,
